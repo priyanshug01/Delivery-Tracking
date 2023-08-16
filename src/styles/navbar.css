@@ -1,0 +1,38 @@
+.navbar {
+  position: fixed;
+  top: 15px;
+  left: 10px;
+  width: 65px;
+  height: 94%;
+  background-color: #111111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  border-radius: 150px;
+}
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 170px;
+}
+
+.nav-links li {
+  margin-bottom: 40px;
+}
+
+.nav-links img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.nav-links img:hover {
+  background-color: #c3b649;
+}
+
+.nav-links img:active {
+  background-color: #c3b649;
+}

@@ -1,0 +1,30 @@
+.heading {
+    font-size: 25px;
+    padding-left: 120px;
+    padding-top: 20px;
+    font-weight: 600;
+}
+
+.user {
+    padding-left: 70%;
+    padding-top: 20px;
+}
+
+.username {
+    padding-left: 10px;
+}
+
+.tracking-container {
+    position: fixed;
+    top: 60px;
+    left: 100px;
+    width: 1400px;
+    height: 87%;
+    background-color: #ffffff;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    border-radius: 50px;
+}

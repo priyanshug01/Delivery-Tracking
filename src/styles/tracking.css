@@ -2,23 +2,31 @@
     font-size: 25px;
     padding-left: 120px;
     padding-top: 20px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .user {
     padding-left: 70%;
-    padding-top: 20px;
+    padding-top: 15px;
+}
+
+.user img {
+    width: 30px;
+    border-radius: 10px;
 }
 
 .username {
-    padding-left: 10px;
+    padding-left: 15px;
+    padding-top: 8px;
+    float: right;
+    font-weight: 500;
 }
 
 .tracking-container {
     position: fixed;
     top: 60px;
     left: 100px;
-    width: 1400px;
+    width: 92%;
     height: 87%;
     background-color: #ffffff;
     color: #fff;

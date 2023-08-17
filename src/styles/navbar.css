@@ -16,7 +16,7 @@
 .nav-links ul {
   list-style: none;
   padding: 0;
-  margin-top: 170px;
+  margin-top: 135px;
 }
 
 .nav-links li {
@@ -24,15 +24,19 @@
 }
 
 .nav-links img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   vertical-align: middle;
+  border: 5px solid #111111;
+  border-radius: 4px;
 }
 
 .nav-links img:hover {
   background-color: #c3b649;
+  border: 5px solid #c3b649;
 }
 
 .nav-links img:active {
   background-color: #c3b649;
+  border: 5px solid #c3b649;
 }

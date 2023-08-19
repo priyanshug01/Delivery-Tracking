@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react';
 import '../styles/tracking.css';
 import man from '../images/man.png';
@@ -7,6 +8,10 @@ import payload from '../images/payload.png';
 import volume from '../images/volume.png';
 import distance from '../images/distance.png';
 import time from '../images/time.png';
+import man1 from '../images/man1.png';
+import call from '../images/call.png';
+import pin from '../images/pin.png';
+import calendar from '../images/calendar.png';
 
 const Tracking = () => {
     return (
@@ -65,22 +70,30 @@ const Tracking = () => {
                         </div>
                     </div>
                     <div className='column1'>
-                        <img src={truck} alt='truck' className='truck'></img>
-                        <div className="card-row">
-                            <div className="card-column">
-                                <div className="contact-card">
-                                    <h1 className='card-value'>51</h1>
-                                    <h5 className='card-unit1'>Km</h5>
-                                    <p className='card-title'>Distance</p>
-                                    <img className='card-logo' src={distance} alt='distance'></img>
+                        <iframe className='map' src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d46373.719834648524!2d4.833254383815726!3d52.34832363017738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47c5e1e2c3698a61%3A0x595abf41bfccdee!2sAmsterdam%20UMC%2C%20locatie%20VUmc!3m2!1d52.334610399999995!2d4.8598083!4m5!1s0x47c609eec1bb16e5%3A0xd54373ae6a408585!2sRijksmuseum%2C%20Museumstraat%201%2C%201071%20XX%20Amsterdam%2C%20Netherlands!3m2!1d52.3599976!2d4.8852188!5e0!3m2!1sen!2sin!4v1692420985827!5m2!1sen!2sin" loading='lazy' referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div className="details-container">
+                            <div className="details-row">
+                                <div className="details-column">
+                                    <div className="details">
+                                        <div className="details-user-container">
+                                            <img className='details-user' src={man1} alt="user" />
+                                            <h5 className='details-posi'>Driver</h5>
+                                            <p className='details-id'>ID : 222-111-33</p>
+                                            <h4 className='details-name'>Mathew Perry</h4>
+                                            <button className="icon-button"><img className='button-logo' src={call} alt='call'></img>Call</button>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="card-column">
-                                <div className="contact-card">
-                                    <h1 className='card-value'>90</h1>
-                                    <h5 className='card-unit1'>Mins</h5>
-                                    <p className='card-title'>Estimated Time</p>
-                                    <img className='card-logo' src={time} alt='time'></img>
+                                <div className="details-column">
+                                    <div className="details">
+                                        <h5 className='details-title'>Address</h5>
+                                        <img className='details-logo' src={pin} alt='pin'></img>
+                                        <p className='details-addr'>Houstan Lane, Lan 9, 22/1.</p>
+                                        <h5 className='details-title'>Delivery</h5>
+                                        <img className='details-logo' src={calendar} alt='calendar'></img>
+                                        <p className='details-time'>12:30 PM</p>
+                                        <p className='details-date'>31 Jan</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

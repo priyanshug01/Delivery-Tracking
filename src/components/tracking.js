@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react';
+import NavBar from './navbar';
 import '../styles/tracking.css';
 import man from '../images/man.png';
 import truck from '../images/truck.png';
@@ -12,15 +13,61 @@ import man1 from '../images/man1.png';
 import call from '../images/call.png';
 import pin from '../images/pin.png';
 import calendar from '../images/calendar.png';
+import cross from '../images/cross.png';
 
 const Tracking = () => {
     return (
         <>
+            <NavBar />
             <div className="heading">Tracking</div>
             <div className="user">
                 <img src={man} alt="user" />
                 <span className='username'>Mathew Perry</span>
             </div>
+            <div className='overview-container'>
+                <img className='overview-cross' src={cross} alt="cross" />
+                <div className='overview-id'>#127777489-DL-NY</div>
+                <div className='button-container'>
+                    <div className='overview-button'>Out for Delivery</div>
+                    <div className='overview-button'>Parcel</div>
+                </div>
+                <div class="dotted-line"></div>
+                <img className='overview-icon' src={man} alt="user" />
+                <div class="overview-status">Package has left Courier Facility</div>
+                <div class="overview-country">San Francisco, California</div>
+                <img className='overview-icon' src={man} alt="user" />
+                <div class="overview-status">Package arrived at Local Facility</div>
+                <div class="overview-country">New York City, New York</div>
+                <img className='overview-icon' src={man} alt="user" />
+                <div class="overview-status">Out for Delivery</div>
+                <div class="overview-country">New York City, New York</div>
+                <img className='overview-icon' src={man} alt="user" />
+                <div class="overview-status">Delivered</div>
+                <div class="overview-country">1567 Dove Street, New York City, 9888</div>
+            </div>
+            <div className='delivery-container'>
+                <div className='delivery-card'>
+                    <div className='delivery-id'>#127777489-DL-NY</div>
+                    <div className='button-container'>
+                        <div className='delivery-button'>In Transit</div>
+                        <div className='delivery-button'>Documents</div>
+                    </div>
+                    <img className='delivery-icon' src={man} alt="user" />
+                    <div class="delivery-status">Package has left Courier Facility</div>
+                    <div class="delivery-country">Detroit, Denmark</div>
+                </div>
+                <div className='delivery-card'>
+                    <div className='delivery-id'>#127777489-DL-NY</div>
+                    <div className='button-container'>
+                        <div className='delivery-button'>In Customs</div>
+                        <div className='delivery-button'>Parcel</div>
+                    </div>
+                    <img className='delivery-icon' src={man} alt="user" />
+                    <div class="delivery-status">Customs</div>
+                    <div class="delivery-country">New York City, New York</div>
+                </div>
+            </div>
+
             <div className='tracking-container'>
                 <div className='row1'>
                     <div className='column1'>

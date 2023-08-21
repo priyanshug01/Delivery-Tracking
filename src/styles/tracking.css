@@ -172,6 +172,12 @@
     float: left;
     height: 185px;
     margin: 5px;
+    transition: all .2s ease-in-out;
+}
+
+.tilt:hover {
+    transform: scale(0.95);
+    animation-timing-function: ease;
 }
 
 .details-user {
@@ -344,6 +350,11 @@
     margin-bottom: 20px;
     padding-bottom: 15px;
     border-top: 12px solid #c3b649;
+    transition: all .2s ease-in-out;
+}
+
+.delivery-card:hover {
+    transform: scale(1.05);
 }
 
 .delivery-id {

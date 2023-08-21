@@ -121,7 +121,7 @@ const Tracking = () => {
                         <div className="details-container">
                             <div className="details-row">
                                 <div className="details-column">
-                                    <div className="details">
+                                    <div className="details tilt">
                                         <div className="details-user-container">
                                             <img className='details-user' src={man1} alt="user" />
                                             <h5 className='details-posi'>Driver</h5>
@@ -132,7 +132,7 @@ const Tracking = () => {
                                     </div>
                                 </div>
                                 <div className="details-column">
-                                    <div className="details">
+                                    <div className="details tilt">
                                         <h5 className='details-title'>Address</h5>
                                         <img className='details-logo' src={pin} alt='pin'></img>
                                         <p className='details-addr'>Houstan Lane, Lan 9, 22/1.</p>

@@ -13,12 +13,12 @@ const NavBar = () => {
       <div className="navbar">
         <nav className="nav-links">
           <ul>
-            <li><img src={logo1} alt="D" /></li>
-            <li><img src={logo2} alt="L" /></li>
-            <li><img src={logo3} alt="T" /></li>
-            <li><img src={logo4} alt="C" /></li>
-            <li><img src={logo5} alt="A" /></li>
-            <li><img src={logo6} alt="S" /></li>
+            <li><img src={logo1} alt="DashBoard" /></li>
+            <li><img src={logo2} alt="Location" /></li>
+            <li><img src={logo3} alt="Tracking" /></li>
+            <li><img src={logo4} alt="Vehicles" /></li>
+            <li><img src={logo5} alt="Accounts"/></li>
+            <li><img src={logo6} alt="Settings" /></li>
           </ul>
         </nav>
       </div>

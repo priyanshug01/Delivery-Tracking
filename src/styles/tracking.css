@@ -49,7 +49,7 @@
 }
 
 .column1:first-child {
-    margin-left: -50px;
+    margin-left: -40px;
 }
 
 .row1::after {
@@ -60,7 +60,7 @@
 
 .column1 .truck {
     width: 400px;
-    height: 250px;
+    height: 235px;
     border-radius: 4px;
 }
 
@@ -76,7 +76,7 @@
 
 .documents {
     margin-left: 65%;
-    margin-top: -35px;
+    margin-top: -40px;
     font-size: 12px;
     color: #c3b649;
     text-decoration: underline;
@@ -86,11 +86,12 @@
     width: 70px;
     margin-left: 20px;
     float: left;
+    margin-top: -10px;
 }
 
 .card-container {
     align-items: center;
-    padding-top: 70px;
+    padding-top: 60px;
 }
 
 .card-row {
@@ -116,19 +117,20 @@
 
 .card-unit {
     text-align: left;
-    margin-top: -40px;
-    padding-left: 75px;
+    margin-top: -50px;
+    padding-left: 70px;
 }
 
 .card-unit1 {
     text-align: left;
-    margin-top: -40px;
-    padding-left: 55px;
+    margin-top: -50px;
+    padding-left: 60px;
 }
 
 .card-title {
     text-align: left;
     margin-left: 20px;
+    margin-top: -5px;
 }
 
 .card-logo {
@@ -140,7 +142,7 @@
 
 .map {
     width: 320px;
-    height: 400px;
+    height: 395px;
     border: 0;
     border-radius: 25px;
 }
@@ -189,7 +191,7 @@
 
 .details-posi {
     text-align: left;
-    padding-top: 30px;
+    padding-top: 25px;
     padding-left: 75px;
 }
 
@@ -197,14 +199,14 @@
     float: left;
     text-align: left;
     margin-left: 25px;
-    margin-top: -3px;
+    margin-top: -5px;
 }
 
 .details-name {
     float: left;
     text-align: left;
-    margin-left: 25px;
-    margin-top: -5px;
+    margin-left: 23px;
+    margin-top: -10px;
     text-decoration: underline;
 }
 
@@ -212,6 +214,7 @@
     text-align: left;
     padding-left: 10px;
     width: 20px;
+    margin-top: 15px;
 }
 
 .details-logo {
@@ -253,24 +256,24 @@
 .details-addr {
     font-size: 12px;
     float: right;
-    margin: -15px 20px 20px 35px;
+    margin: -20px 20px 20px 35px;
 }
 
 .details-time {
     font-size: 12px;
     float: right;
-    margin: -15px 50px 20px 35px;
+    margin: -17px 55px 20px 35px;
 }
 
 .details-date {
     font-size: 12px;
     float: right;
-    margin: -15px 60px 20px 35px;
+    margin: -15px 65px 20px 35px;
 }
 
 .overview-container {
     width: 320px;
-    height: 330px;
+    height: 335px;
     background-color: #c3b649;
     margin-left: -1320px;
     margin-top: 70px;
@@ -280,7 +283,7 @@
 }
 
 .overview-id {
-    margin: 15px 50px 10px 0;
+    margin: 10px 50px 10px 0;
     font-size: 25px;
     font-weight: 600;
 }
@@ -297,6 +300,8 @@
     color: #ffffff;
     border: none;
     border-radius: 25px;
+    font-size: 13px;
+    margin-top: -5px;
 }
 
 .dotted-line {
@@ -307,13 +312,13 @@
 
 .overview-status {
     font-weight: bold;
-    font-size: 13px;
+    font-size: 12px;
     margin: 15px 0 4px 40px;
     text-align: left;
 }
 
 .overview-country {
-    font-size: 12px;
+    font-size: 11px;
     text-align: left;
     margin-left: 40px;
     text-transform: capitalize;
@@ -325,7 +330,7 @@
     height: 20px;
     float: left;
     border-radius: 24px;
-    margin: 13px 0 0 10px;
+    margin: 14px 0 0 10px;
 }
 
 .overview-cross {
@@ -369,17 +374,19 @@
     color: #111111;
     border: none;
     border-radius: 25px;
+    margin-top: -5px;
+    font-size: 13px;
 }
 
 .delivery-status {
     font-weight: bold;
-    font-size: 13px;
+    font-size: 12px;
     margin: 15px 0 4px 40px;
     text-align: left;
 }
 
 .delivery-country {
-    font-size: 12px;
+    font-size: 11px;
     text-align: left;
     margin-left: 40px;
     text-transform: capitalize;
@@ -391,5 +398,5 @@
     height: 20px;
     float: left;
     border-radius: 24px;
-    margin: 13px 0 0 10px;
+    margin: 14px 0 0 10px;
 }

@@ -6,7 +6,7 @@ import Account from './components/account';
 function App() {
   return (
     <div className="App">
-      <Account />
+      <Tracking />
     </div>
   );
 }

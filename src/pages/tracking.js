@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react';
 import '../styles/tracking.css';
-import NavBar from './navbar';
+import NavBar from '../components/navbar';
 import man from '../images/man.png';
 import truck from '../images/truck.png';
 import plate from '../images/plate.png';

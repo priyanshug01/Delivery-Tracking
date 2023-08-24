@@ -30,8 +30,8 @@ const Account = () => {
             <div className={`form signinForm ${activeForm === 'signin' ? 'active' : ''}`}>
               <form>
                 <h3>Sign In</h3>
-                <input type="text" placeholder="Username" />
-                <input type="password" placeholder="Password" />
+                <input type="text" placeholder="Username" required />
+                <input type="password" placeholder="Password" required />
                 <input type="submit" value="Login" />
                 <a href="#" className="forget">Forgot Password?</a>
               </form>
@@ -39,10 +39,10 @@ const Account = () => {
             <div className={`form signupForm ${activeForm === 'signup' ? 'active' : ''}`}>
               <form>
                 <h3>Sign Up</h3>
-                <input type="text" placeholder="Username" />
-                <input type="email" placeholder="Email Address" />
-                <input type="password" placeholder="Password" />
-                <input type="password" placeholder="Confirm Password" />
+                <input type="text" placeholder="Username" required />
+                <input type="email" placeholder="Email Address" required />
+                <input type="password" placeholder="Password" required />
+                <input type="password" placeholder="Confirm Password" required />
                 <input type="submit" value="Sign Up" />
               </form>
             </div>

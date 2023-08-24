@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../styles/account.css';
-import NavBar from '../components/navbar';
 
 const Account = () => {
   const [activeForm, setActiveForm] = useState('signin');
@@ -15,7 +14,6 @@ const Account = () => {
 
   return (
     <>
-    <NavBar />
       <div className={`acc-page ${activeForm === 'signup' ? 'active' : ''}`}>
         <div className={`acc-container ${activeForm === 'signup' ? 'active' : ''}`}>
           <div className="backg">

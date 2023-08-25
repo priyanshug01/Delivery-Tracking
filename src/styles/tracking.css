@@ -75,7 +75,7 @@
     margin-left: 65%;
     margin-top: -40px;
     font-size: 12px;
-    color: #c3b649;
+    color: #ef5350;
     text-decoration: underline;
 }
 
@@ -102,9 +102,9 @@
 }
 
 .card {
-    border: 1px solid #ccc;
+    border: 1px solid #111;
     border-radius: 25px;
-    background-color: #fdfbf0;
+    background-color: #ffcdd2;
 }
 
 .card-value {
@@ -191,6 +191,7 @@
     text-align: left;
     padding-top: 25px;
     padding-left: 75px;
+    color: #fff;
 }
 
 .details-id {
@@ -198,6 +199,7 @@
     text-align: left;
     margin-left: 25px;
     margin-top: -5px;
+    color: #fff;
 }
 
 .details-name {
@@ -206,6 +208,7 @@
     margin-left: 23px;
     margin-top: -10px;
     text-decoration: underline;
+    color: #fff;
 }
 
 .details-title {
@@ -223,7 +226,7 @@
 }
 
 .details-user-container {
-    background-color: #c3b649;
+    background-color: #ef5350;
     margin-top: -22px;
     width: 160px;
     height: 130px;
@@ -272,7 +275,7 @@
 .overview-container {
     width: 320px;
     height: 335px;
-    background-color: #c3b649;
+    background-color: #ef5350;
     margin-left: -1320px;
     margin-top: 70px;
     border-radius: 25px;
@@ -303,7 +306,7 @@
 }
 
 .dotted-line {
-    border-top: 2px dashed #eee49c;
+    border-top: 2px dashed #ffcdd2;
     width: 95%;
     margin: 15px 0 10px 7px;
 }
@@ -352,7 +355,7 @@
     color: #111111;
     margin-bottom: 20px;
     padding-bottom: 15px;
-    border-top: 12px solid #c3b649;
+    border-top: 12px solid #ef5350;
     transition: all .2s ease-in-out;
 }
 
@@ -368,7 +371,7 @@
 
 .delivery-button {
     padding: 10px 15px;
-    background-color: #f2eed1;
+    background-color: #ffcdd2;
     color: #111111;
     border: none;
     border-radius: 25px;

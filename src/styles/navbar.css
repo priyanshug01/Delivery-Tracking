@@ -32,11 +32,11 @@
 }
 
 .nav-links img:hover {
-  background-color: #c3b649;
-  border: 5px solid #c3b649;
+  background-color: #ef5350;
+  border: 5px solid #ef5350;
 }
 
 .nav-links img:active {
-  background-color: #c3b649;
-  border: 5px solid #c3b649;
+  background-color: #ef5350;
+  border: 5px solid #ef5350;
 }

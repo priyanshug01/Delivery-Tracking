@@ -1,7 +1,7 @@
 .acc-page {
     display: flex;
     justify-content: center;
-    background: #f2eed1;
+    background: #ffcdd2;
     align-items: center;
     min-height: 100vh;
     transition: 0.5s;
@@ -9,7 +9,7 @@
 }
 
 .acc-page.active {
-    background: #c3b649;
+    background: #ef5350;
 }
 
 .acc-container {
@@ -64,7 +64,7 @@
     left: 0;
     width: 50%;
     height: 100%;
-    background: #c3b649;
+    background: #ef5350;
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -76,7 +76,7 @@
 
 .acc-form.active {
     left: 50%;
-    background: #f2eed1;
+    background: #ffcdd2;
 }
 
 .acc-form .form {
@@ -130,7 +130,7 @@
 }
 
 .acc-form .form form input[type="submit"] {
-    background: #f2eed1;
+    background: #ffcdd2;
     border: none;
     color: #111111;
     max-width: 100px;
@@ -142,7 +142,7 @@
 }
 
 .acc-form.active .form form input[type="submit"] {
-    background: #c3b649;
+    background: #ef5350;
     color: #ffffff;
 }
 /* 

@@ -1,23 +1,46 @@
 .heading {
     font-size: 25px;
-    padding-left: 120px;
-    padding-top: 20px;
     font-weight: 700;
+    float: left;
 }
 
-.user {
-    padding-left: 70%;
-    padding-top: 15px;
+.tab-container {
+    width: 1350px;
+    margin: 70px 0 0 -140px;
+    height: 570px;
+    background: aqua;
 }
 
-.user img {
-    width: 30px;
-    border-radius: 10px;
+.tab-view {
+    border: 1px solid #111;
+    padding: 20px;
+    margin: 0 auto;
 }
 
-.username {
-    padding-left: 15px;
-    padding-top: 8px;
-    float: right;
-    font-weight: 500;
+.tab-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.tab-buttons button {
+    padding: 10px 20px;
+    background-color: #ef9a9a;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 25%;
+    font-weight: 600;
+    color: #111;
+}
+
+.tab-buttons button.active {
+    background-color: #ef5350;
+    color: #fff;
+}
+
+.tab-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    height: 460px;
 }

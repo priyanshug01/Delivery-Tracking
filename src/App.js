@@ -29,3 +29,5 @@ function App() {
 }
 
 export default App;
+
+//https://colorswall.com/palette/7

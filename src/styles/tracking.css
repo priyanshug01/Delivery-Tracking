@@ -77,6 +77,7 @@
     font-size: 12px;
     color: #ef5350;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .plate {
@@ -340,6 +341,7 @@
     float: right;
     margin: 20px 15px 0 0;
     opacity: 0.6;
+    cursor: pointer;
 }
 
 .delivery-container {
@@ -357,6 +359,7 @@
     padding-bottom: 15px;
     border-top: 12px solid #ef5350;
     transition: all .2s ease-in-out;
+    cursor: pointer;
 }
 
 .delivery-card:hover {

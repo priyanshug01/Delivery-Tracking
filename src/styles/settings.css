@@ -48,6 +48,7 @@
 
 .form-input[type="date"] {
     width: 180px;
+    cursor: text;
   }
 
 .dropdown-container {
@@ -68,6 +69,7 @@
     border-radius: 4px;
     background-color: white;
     width: 200px;
+    cursor: pointer;
 }
 
 .form-button {

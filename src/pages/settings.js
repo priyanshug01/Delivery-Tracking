@@ -20,6 +20,7 @@ const Settings = () => {
         event.preventDefault();
         console.log('Submitted values:', inputValues);
         console.log('Selected option:', selectedOption);
+        window.open('./location', '_blank');
     };
 
     const inputHeaders = ['From', 'To', 'From', 'To'];

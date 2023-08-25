@@ -56,8 +56,9 @@
 
 .column1 .truck {
     width: 400px;
-    height: 235px;
+    height: 220px;
     border-radius: 4px;
+    margin-top: 15px;
 }
 
 .vehicle-details {
@@ -137,8 +138,9 @@
 }
 
 .map {
+    margin-top: 15px;
     width: 320px;
-    height: 395px;
+    height: 375px;
     border: 0;
     border-radius: 25px;
 }

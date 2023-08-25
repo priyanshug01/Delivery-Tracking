@@ -6,13 +6,16 @@
 
 .tab-container {
     width: 1350px;
-    margin: 70px 0 0 -140px;
-    height: 570px;
-    background: aqua;
+    margin: 70px 0 0 -100px;
+    height: 610px;
+    background: #fff;
+    border-radius: 25px;
+    overflow: hidden;
 }
 
 .tab-view {
     border: 1px solid #111;
+    border-radius: 25px;
     padding: 20px;
     margin: 0 auto;
 }
@@ -39,8 +42,57 @@
     color: #fff;
 }
 
-.tab-content p {
+.table-view {
+    padding: 20px;
     font-size: 16px;
     line-height: 1.6;
-    height: 460px;
+    height: 500px;
+    color: #111;
+}
+
+.add-btn {
+    background-color: #ef5350;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    width: 10%;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #ef5350;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px;
+    margin-left: 10px;
+    width: 80px;
+}
+
+.edit-btn img,
+.delete-btn img {
+  margin-right: 5px;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    background-color: #ef9a9a;
 }

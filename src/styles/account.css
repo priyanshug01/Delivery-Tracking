@@ -1,3 +1,9 @@
+.heading {
+    font-size: 25px;
+    font-weight: 700;
+    float: left;
+}
+
 .acc-page {
     display: flex;
     justify-content: center;
@@ -5,7 +11,7 @@
     align-items: center;
     min-height: 100vh;
     transition: 0.5s;
-    width: 100%;
+    width: 75%;
 }
 
 .acc-page.active {

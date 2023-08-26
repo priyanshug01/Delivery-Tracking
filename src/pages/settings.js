@@ -29,7 +29,6 @@ const Settings = () => {
         <>
             <div className="heading">Settings</div>
             <form className="form-container" onSubmit={handleSubmit}>
-                <h2 className="form-header">Input Form</h2>
                 <div className="input-row">
                     {inputValues.map((value, index) => (
                         <div key={index} className="input-field">
@@ -60,9 +59,11 @@ const Settings = () => {
                             <option value="Option 3">Option 3</option>
                         </select>
                     </div>
+                    <button className="form-button" type="submit">Submit</button>
                 </div>
-                <button className="form-button" type="submit">Submit</button>
             </form>
+
+            
         </>
     );
 };

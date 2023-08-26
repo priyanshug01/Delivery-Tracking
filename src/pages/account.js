@@ -14,6 +14,7 @@ const Account = () => {
 
   return (
     <>
+      <div className="acc-heading">Accounts</div>
       <div className={`acc-page ${activeForm === 'signup' ? 'active' : ''}`}>
         <div className={`acc-container ${activeForm === 'signup' ? 'active' : ''}`}>
           <div className="backg">

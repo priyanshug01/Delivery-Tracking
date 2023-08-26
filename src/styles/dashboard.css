@@ -21,3 +21,386 @@
     float: right;
     font-weight: 500;
 }
+
+.tracking-container {
+    position: fixed;
+    top: 60px;
+    left: 33%;
+    width: 64%;
+    height: 87%;
+    background-color: #ffffff;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    border-radius: 50px;
+}
+
+.column1 {
+    float: left;
+    margin: 10px;
+    border-radius: 50px;
+    width: 430px;
+    height: 630px;
+    margin-left: 25px;
+    color: #111111;
+    margin-top: -15px;
+}
+
+.row1::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column1 .truck {
+    width: 400px;
+    height: 220px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.vehicle-details {
+    width: 100%;
+}
+
+.vehicle-owner {
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.documents {
+    margin-left: 65%;
+    margin-top: -40px;
+    font-size: 12px;
+    color: #ef5350;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.plate {
+    width: 70px;
+    margin-left: 20px;
+    float: left;
+    margin-top: -10px;
+}
+
+.card-container {
+    align-items: center;
+    padding-top: 60px;
+}
+
+.card-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-column {
+    flex: 1;
+    padding: 5px;
+}
+
+.card {
+    border: 1px solid #111;
+    border-radius: 25px;
+    background-color: #ffcdd2;
+}
+
+.card-value {
+    text-align: left;
+    margin-left: 15px;
+}
+
+.card-unit {
+    text-align: left;
+    margin-top: -50px;
+    padding-left: 70px;
+}
+
+.card-unit1 {
+    text-align: left;
+    margin-top: -50px;
+    padding-left: 60px;
+}
+
+.card-title {
+    text-align: left;
+    margin-left: 20px;
+    margin-top: -5px;
+}
+
+.card-logo {
+    width: 20px;
+    float: right;
+    margin-top: -90px;
+    margin-right: 15px;
+}
+
+.map {
+    margin-top: 15px;
+    width: 320px;
+    height: 375px;
+    border: 0;
+    border-radius: 25px;
+}
+
+.details-container {
+    margin-top: 10px;
+    margin-left: 40px;
+    background-color: #111111;
+    width: 350px;
+    height: 205px;
+    border-radius: 25px;
+    color: #ffffff;
+}
+
+.details-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.details-column {
+    flex: 1;
+    padding: 5px;
+}
+
+.details {
+    border: 1px solid #707070;
+    border-radius: 25px;
+    background-color: #4a4a4a;
+    float: left;
+    height: 185px;
+    margin: 5px;
+    transition: all .2s ease-in-out;
+}
+
+.tilt:hover {
+    transform: scale(0.95);
+    animation-timing-function: ease;
+}
+
+.details-user {
+    width: 30px;
+    margin: 15px 10px 10px 30px;
+    float: left;
+    border-radius: 25px;
+}
+
+.details-posi {
+    text-align: left;
+    padding-top: 25px;
+    padding-left: 75px;
+    color: #fff;
+}
+
+.details-id {
+    float: left;
+    text-align: left;
+    margin-left: 25px;
+    margin-top: -5px;
+    color: #fff;
+}
+
+.details-name {
+    float: left;
+    text-align: left;
+    margin-left: 23px;
+    margin-top: -10px;
+    text-decoration: underline;
+    color: #fff;
+}
+
+.details-title {
+    text-align: left;
+    padding-left: 10px;
+    width: 20px;
+    margin-top: 15px;
+}
+
+.details-logo {
+    width: 15px;
+    float: left;
+    margin-left: 10px;
+    margin-top: -10px;
+}
+
+.details-user-container {
+    background-color: #ef5350;
+    margin-top: -22px;
+    width: 160px;
+    height: 130px;
+    border-radius: 25px;
+    color: #111111;
+}
+
+.icon-button {
+    display: flex;
+    padding: 10px;
+    margin: 7px;
+    margin-top: 90px;
+    background-color: #757575;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 145px;
+    font-size: 16px;
+}
+
+.button-logo {
+    width: 20px;
+    margin-right: 20px;
+    margin-left: 25px;
+}
+
+.details-addr {
+    font-size: 12px;
+    float: right;
+    margin: -20px 20px 20px 35px;
+}
+
+.details-time {
+    font-size: 12px;
+    float: right;
+    margin: -17px 55px 20px 35px;
+}
+
+.details-date {
+    font-size: 12px;
+    float: right;
+    margin: -15px 65px 20px 35px;
+}
+
+.overview-container {
+    width: 320px;
+    height: 335px;
+    background-color: #ef5350;
+    margin-left: -1355px;
+    margin-top: 70px;
+    border-radius: 25px;
+    color: #ffffff;
+    border-top: 12px solid #111;
+}
+
+.overview-id {
+    margin: 10px 50px 10px 0;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.button-container {
+    margin-left: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.overview-button {
+    padding: 10px 15px;
+    background-color: #111111;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    font-size: 13px;
+    margin-top: -5px;
+}
+
+.dotted-line {
+    border-top: 2px dashed #ffcdd2;
+    width: 95%;
+    margin: 15px 0 10px 7px;
+}
+
+.overview-status {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 15px 0 4px 40px;
+    text-align: left;
+}
+
+.overview-country {
+    font-size: 11px;
+    text-align: left;
+    margin-left: 40px;
+    text-transform: capitalize;
+    opacity: 0.8;
+}
+
+.overview-icon {
+    width: 20px;
+    height: 20px;
+    float: left;
+    border-radius: 24px;
+    margin: 14px 0 0 10px;
+}
+
+.overview-cross {
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin: 20px 15px 0 0;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.delivery-container {
+    width: 320px;
+    height: 400px;
+    margin-left: -320px;
+    margin-top: 430px;
+}
+
+.delivery-card {
+    background-color: #ffffff;
+    border-radius: 25px;
+    color: #111111;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-top: 12px solid #ef5350;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.delivery-card:hover {
+    transform: scale(1.05);
+}
+
+.delivery-id {
+    margin: 15px 50px 10px 0;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.delivery-button {
+    padding: 10px 15px;
+    background-color: #ffcdd2;
+    color: #111111;
+    border: none;
+    border-radius: 25px;
+    margin-top: -5px;
+    font-size: 13px;
+}
+
+.delivery-status {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 15px 0 4px 40px;
+    text-align: left;
+}
+
+.delivery-country {
+    font-size: 11px;
+    text-align: left;
+    margin-left: 40px;
+    text-transform: capitalize;
+    opacity: 0.8;
+}
+
+.delivery-icon {
+    width: 20px;
+    height: 20px;
+    float: left;
+    border-radius: 24px;
+    margin: 14px 0 0 10px;
+}

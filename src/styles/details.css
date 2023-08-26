@@ -17,6 +17,7 @@
     width: 1320px;
     margin-left: 115px;
     border: 1px solid #111;
+    overflow: hidden;
 }
 
 .order-header {
@@ -48,8 +49,9 @@
 
 .gradient-line {
     width: 150px;
+    margin-top: -7px;
     height: 4px;
-    background: linear-gradient(to right, #ef5350 45%, black 50%);
+    background: linear-gradient(to right, #ef5350 45%, black 55%);
 }
 
 .completion-header {
@@ -110,4 +112,59 @@
     text-align: center;
     font-size: 12px;
     width: 100px;
+}
+
+.cust-header {
+    width: 35%;
+    height: 300px;
+    margin-left: 0px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.cust-header th {
+    width: 40%;
+}
+
+.cust-header td {
+    width: 60%;
+
+}
+
+.tb-header {
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.details-map {
+    margin-top: -270px;
+    width: 25%;
+    height: 250px;
+    border: 0;
+    border-radius: 25px;
+    position: absolute;
+    margin-left: -180px;
+}
+
+.ship-header {
+    width: 35%;
+    height: 300px;
+    text-align: right;
+    position: absolute;
+    margin: -300px 0 0 840px;
+}
+
+.ship-header th {
+    width: 40%;
+}
+
+.ship-header td {
+    width: 60%;
+    text-align: center;
+}
+
+.tb-header2 {
+    font-size: 18px;
+    text-decoration: underline;
+    width: 60%;
 }

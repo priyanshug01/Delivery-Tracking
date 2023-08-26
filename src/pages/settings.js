@@ -20,10 +20,21 @@ const Settings = () => {
         event.preventDefault();
         console.log('Submitted values:', inputValues);
         console.log('Selected option:', selectedOption);
-        window.open('./location', '_blank');
     };
 
     const inputHeaders = ['From', 'To', 'From', 'To'];
+
+    const [data] = useState([
+        { id: 1, date: '01-04-2023', origin: 'Noida', destination: 'Tirupati', status: 'Delivered' },
+        { id: 2, date: '02-04-2023', origin: 'Mundka', destination: 'Guhawati', status: 'Pending' },
+        { id: 3, date: '04-04-2023', origin: 'Alwar', destination: 'Kolkata', status: 'Delivered' },
+        { id: 4, date: '04-04-2023', origin: 'Sonipat', destination: 'Guhawati', status: 'Delivered' },
+        { id: 5, date: '05-04-2023', origin: 'Alwar', destination: 'Guhawati', status: 'Shipped' },
+    ]);
+
+    const handleView = (id) => {
+        window.open('./details', '_blank');
+    };
 
     return (
         <>
@@ -54,16 +65,44 @@ const Settings = () => {
                     <div className="dropdown-container">
                         <h3 className="dropdown-header">Status</h3>
                         <select className="dropdown" value={selectedOption} onChange={handleDropdownChange}>
-                            <option value="Option 1">Option 1</option>
-                            <option value="Option 2">Option 2</option>
-                            <option value="Option 3">Option 3</option>
+                            <option value="Option 1">Shipped</option>
+                            <option value="Option 2">Delivered</option>
+                            <option value="Option 3">Cancelled</option>
+                            <option value="Option 2">Pending</option>
                         </select>
                     </div>
                     <button className="form-button" type="submit">Submit</button>
                 </div>
             </form>
 
-            
+            <div className="table-view-container">
+                <table className="table-data">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Origin</th>
+                            <th>Destination</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {data.map(item => (
+                            <tr key={item.id}>
+                                <td>{item.id}</td>
+                                <td>{item.date}</td>
+                                <td>{item.origin}</td>
+                                <td>{item.destination}</td>
+                                <td>{item.status}</td>
+                                <td><button className="view-btn" onClick={() => handleView(item.id)}>
+                                    View
+                                </button></td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </>
     );
 };

@@ -7,6 +7,7 @@ import Dashboard from './pages/dashboard';
 import Location from './pages/location';
 import Vehicles from './pages/vehicles';
 import Settings from './pages/settings';
+import Details from './pages/details';
 import NavBar from './components/navbar';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/vehicles" element={<Vehicles />} />
           <Route path="/accounts" element={<Account />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/details" element={<Details />} />
         </Routes>
       </div>
     </Router>

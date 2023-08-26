@@ -25,11 +25,11 @@ const Settings = () => {
     const inputHeaders = ['From', 'To', 'From', 'To'];
 
     const [data] = useState([
-        { id: 1, date: '01-04-2023', origin: 'Noida', destination: 'Tirupati', status: 'Delivered' },
-        { id: 2, date: '02-04-2023', origin: 'Mundka', destination: 'Guhawati', status: 'Pending' },
-        { id: 3, date: '04-04-2023', origin: 'Alwar', destination: 'Kolkata', status: 'Delivered' },
-        { id: 4, date: '04-04-2023', origin: 'Sonipat', destination: 'Guhawati', status: 'Delivered' },
-        { id: 5, date: '05-04-2023', origin: 'Alwar', destination: 'Guhawati', status: 'Shipped' },
+        { id: 1, tid: '#127777489-DL-NY', date: '01-04-2023', origin: 'Noida', destination: 'Tirupati', status: 'Delivered' },
+        { id: 2, tid: '#127777489-DL-NY', date: '02-04-2023', origin: 'Mundka', destination: 'Guhawati', status: 'Pending' },
+        { id: 3, tid: '#127777489-DL-NY', date: '04-04-2023', origin: 'Alwar', destination: 'Kolkata', status: 'Delivered' },
+        { id: 4, tid: '#127777489-DL-NY', date: '04-04-2023', origin: 'Sonipat', destination: 'Guhawati', status: 'Delivered' },
+        { id: 5, tid: '#127777489-DL-NY', date: '05-04-2023', origin: 'Alwar', destination: 'Guhawati', status: 'Shipped' },
     ]);
 
     const handleView = (id) => {
@@ -79,8 +79,8 @@ const Settings = () => {
                 <table className="table-data">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Date</th>
+                            <th>Transaction ID</th>
+                            <th>Booking Date</th>
                             <th>Origin</th>
                             <th>Destination</th>
                             <th>Status</th>
@@ -90,7 +90,7 @@ const Settings = () => {
                     <tbody>
                         {data.map(item => (
                             <tr key={item.id}>
-                                <td>{item.id}</td>
+                                <td>{item.tid}</td>
                                 <td>{item.date}</td>
                                 <td>{item.origin}</td>
                                 <td>{item.destination}</td>

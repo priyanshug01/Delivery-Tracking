@@ -3,6 +3,12 @@ import '../styles/details.css';
 
 const Details = () => {
 
+    const [selectedOption, setSelectedOption] = useState('Option 1');
+
+    const handleDropdownChange = (event) => {
+        setSelectedOption(event.target.value);
+    };
+
     const circleData = [
         { text: 'Ordered' },
         { text: 'Picked Up' },
@@ -48,24 +54,36 @@ const Details = () => {
                         <td></td>
                     </tr>
                     <tr>
-                        <th>Customer's Name</th>
-                        <td>OM Logistics</td>
+                        <th>Client's Name</th>
+                        <td>: OM Logistics</td>
                     </tr>
                     <tr>
-                        <th>Customer's Name</th>
-                        <td>OM Logistics</td>
+                        <th>Origin</th>
+                        <td>: Noida</td>
                     </tr>
                     <tr>
-                        <th>Customer's Name</th>
-                        <td>OM Logistics</td>
+                        <th>Destination</th>
+                        <td>: Tirupati</td>
                     </tr>
                     <tr>
-                        <th>Customer's Name</th>
-                        <td>OM Logistics</td>
+                        <th>Vehicle Placed By</th>
+                        <td>: Sunny Sir</td>
                     </tr>
                     <tr>
-                        <th>Customer's Name</th>
-                        <td>OM Logistics</td>
+                        <th>Vehicle Type</th>
+                        <td>: 32FT SXL 7MT</td>
+                    </tr>
+                    <tr>
+                        <th>Vehicle No</th>
+                        <td>: NL01AF3270</td>
+                    </tr>
+                    <tr>
+                        <th>Vehicle Reported</th>
+                        <td>: 01-04-2023</td>
+                    </tr>
+                    <tr>
+                        <th>Vehicle Departed</th>
+                        <td>: 02-04-2023</td>
                     </tr>
                 </table>
 
@@ -73,30 +91,117 @@ const Details = () => {
 
                 <table className="ship-header">
                     <tr>
-                        <td></td>
-                        <th className='tb-header2'>Shipping Details</th>
+                        <th></th>
+                        <td className='tb-header2'>Shipping Details</td>
                     </tr>
                     <tr>
-                        <th>Customer's Name</th>
-                        <td>OM Logistics</td>
+                        <th>Supplier's Name</th>
+                        <td>: GOODWILL INDIA TRANS AND LOGISTICS PVT LTD</td>
                     </tr>
                     <tr>
-                        <th>Customer's Name</th>
-                        <td>OM Logistics</td>
+                        <th>Beneficiary's Name</th>
+                        <td>: GOODWILL INDIA TRANS AND LOGISTICS PVT LTD</td>
                     </tr>
                     <tr>
-                        <th>Customer's Name</th>
-                        <td>OM Logistics</td>
+                        <th>Beneficiary A/C</th>
+                        <td>: 15810200022155</td>
                     </tr>
                     <tr>
-                        <th>Customer's Name</th>
-                        <td>OM Logistics</td>
+                        <th>IFSC</th>
+                        <td>: FDRL0001581</td>
                     </tr>
                     <tr>
-                        <th>Customer's Name</th>
-                        <td>OM Logistics</td>
+                        <th>Supplier Mob.</th>
+                        <td>: 9053399955</td>
+                    </tr>
+                    <tr>
+                        <th>Driver Mob.</th>
+                        <td>: 9983958282</td>
                     </tr>
                 </table>
+                <table className="fin-header">
+                    <tr>
+                        <th className='tb-header3'>Financial Details</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Client Fare</th>
+                        <td>: ₹ 74000</td>
+                        <th>Driver Fare</th>
+                        <td>: ₹ 74000</td>
+                    </tr>
+                    <tr>
+                        <th>Loading Charges</th>
+                        <td>: ₹ </td>
+                        <th>Other Charges Paid</th>
+                        <td>: ₹ </td>
+                    </tr>
+                    <tr>
+                        <th>Comm Paid to Client</th>
+                        <td>: ₹ </td>
+                        <th>Adv by Client to Road-Ex</th>
+                        <td>: ₹ 34500</td>
+                    </tr>
+                    <tr>
+                        <th>Comm Received from Supplier</th>
+                        <td>: ₹ 600</td>
+                        <th>Adv by Road-Ex to Supplier</th>
+                        <td>: ₹ 66600</td>
+                    </tr>
+                    <tr>
+                        <th>Client Penalty</th>
+                        <td>: ₹ </td>
+                    </tr>
+                    <tr>
+                        <th>Penalty to Supplier</th>
+                        <td>: ₹ </td>
+                    </tr>
+                    <tr>
+                        <th>Unloading Charge</th>
+                        <td>: ₹ </td>
+                    </tr>
+                </table>
+
+                <table className="pod-header">
+                    <tr>
+                        <th className='tb-header3'>POD Details</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Soft POD Status</th>
+                        <td>: No</td>
+                        <th>POD Status / Hardcopy</th>
+                        <td>: Received</td>
+                    </tr>
+                    <tr>
+                        <th>POD Received On</th>
+                        <td>: 17-04-2023</td>
+                        <th>Soft Copy POD</th>
+                        <td>: <p className="documents">View Documents</p></td>
+                    </tr>
+                    <tr>
+                        <th>POD F/UP Remark</th>
+                        <td>: OK</td>
+                        <th>POD Sent to Client</th>
+                        <td>: 24-04-2023</td>
+                    </tr>
+                </table>
+                <form className='details-form'>
+                    <div className="dt-input-row">
+                        <h4 className="details-dropdown-header">Enter Input</h4>
+                        <input className="dt-input" type="text" placeholder={`Enter Value`} />
+                    </div>
+                    <div className="details-dropdown">
+                        <h4 className="details-dropdown-header">Change Status</h4>
+                        <select className="dt-dropdown" value={selectedOption} onChange={handleDropdownChange}>
+                            <option value="Option 1">Shipped</option>
+                            <option value="Option 2">Delivered</option>
+                            <option value="Option 3">Cancelled</option>
+                            <option value="Option 2">Pending</option>
+                        </select>
+                    </div>
+                    <button className="dt-button" type="submit">Submit</button>
+                </form>
             </div>
         </>
     );

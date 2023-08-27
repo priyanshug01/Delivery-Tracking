@@ -10,13 +10,13 @@
     font-size: 16px;
     border-radius: 25px;
     height: 550px;
-    color: #111;
+    color: #111111;
     position: absolute;
     margin-top: 80px;
     background: #fff;
     width: 1340px;
     margin-left: 115px;
-    border: 1px solid #111;
+    border: 1px solid #111111;
     overflow: auto;
 }
 
@@ -51,7 +51,7 @@
     width: 150px;
     margin-top: -7px;
     height: 4px;
-    background: linear-gradient(to right, #ef5350 45%, black 55%);
+    background: linear-gradient(to right, #c3b649 45%, #111111 55%);
 }
 
 .completion-header {
@@ -75,7 +75,7 @@
     width: 5px;
     width: 1200px;
     height: 3px;
-    background: linear-gradient(to right, #ef5350 45%, black 55%);
+    background: linear-gradient(to right, #c3b649 45%, #111111 55%);
     position: absolute;
     margin-top: 20px;
 }
@@ -92,7 +92,7 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: #ef5350;
+    background-color: #c3b649;
     position: relative;
 }
 
@@ -213,7 +213,7 @@
     margin-left: 3%;
     margin-top: -19px;
     font-size: 12px;
-    color: #ef5350;
+    color: #c3b649;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -223,10 +223,10 @@
     width: 99%;
     justify-content: center;
     margin: 40px 0 0 0;
-    background: #ef9a9a;
+    background: #f2eed1;
     height: 120px;
     border-radius: 25px;
-    border: 1px solid #111;
+    border: 1px solid #111111;
 }
 
 .details-dropdown {
@@ -247,7 +247,7 @@
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .dt-dropdown {
@@ -255,13 +255,13 @@
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: white;
+    background-color: #ffffff;
     cursor: pointer;
 }
 
 .dt-button {
-    background-color: #ef5350;
-    color: white;
+    background-color: #c3b649;
+    color: #ffffff;
     border: none;
     border-radius: 10px;
     padding: 5px 15px;
@@ -272,5 +272,18 @@
 
 .dt-button:hover {
     background-color: #fff;
-    color: #111;
+    color: #111111;
+}
+
+.order-details-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.order-details-container::-webkit-scrollbar-thumb {
+    background-color: #c3b649;
+    border-radius: 25px;
+}
+
+.order-details-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
 }

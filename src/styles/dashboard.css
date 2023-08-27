@@ -89,9 +89,9 @@
 }
 
 .card {
-    border: 1px solid #111;
+    border: 1px solid #111111;
     border-radius: 25px;
-    background-color: #ffcdd2;
+    background-color: #f2eed1;
 }
 
 .card-value {
@@ -201,7 +201,7 @@
 }
 
 .details-user-container {
-    background-color: #ef5350;
+    background-color: #c3b649;
     margin-top: -22px;
     width: 160px;
     height: 130px;
@@ -215,7 +215,7 @@
     margin: 7px;
     margin-top: 90px;
     background-color: #757575;
-    color: white;
+    color: #ffffff;
     border: none;
     border-radius: 25px;
     cursor: pointer;
@@ -250,12 +250,12 @@
 .overview-container {
     width: 320px;
     height: 335px;
-    background-color: #ef5350;
+    background-color: #c3b649;
     margin-left: -1355px;
     margin-top: 70px;
     border-radius: 25px;
     color: #ffffff;
-    border-top: 12px solid #111;
+    border-top: 12px solid #111111;
 }
 
 .overview-id {
@@ -281,7 +281,7 @@
 }
 
 .dotted-line {
-    border-top: 2px dashed #ffcdd2;
+    border-top: 2px dashed #f2eed1;
     width: 95%;
     margin: 15px 0 10px 7px;
 }
@@ -331,7 +331,7 @@
     color: #111111;
     margin-bottom: 20px;
     padding-bottom: 15px;
-    border-top: 12px solid #ef5350;
+    border-top: 12px solid #c3b649;
     transition: all .2s ease-in-out;
     cursor: pointer;
 }
@@ -348,7 +348,7 @@
 
 .delivery-button {
     padding: 10px 15px;
-    background-color: #ffcdd2;
+    background-color: #f2eed1;
     color: #111111;
     border: none;
     border-radius: 25px;

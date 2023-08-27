@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/account.css';
+import clogo from '../images/cmy-logo.png';
 
 const Account = () => {
   const [activeForm, setActiveForm] = useState('signin');
@@ -15,6 +16,7 @@ const Account = () => {
   return (
     <>
       <div className="acc-heading">Accounts</div>
+      <img src={clogo} alt="Company Logo" className='cmpny-logo'/>
       <div className={`acc-page ${activeForm === 'signup' ? 'active' : ''}`}>
         <div className={`acc-container ${activeForm === 'signup' ? 'active' : ''}`}>
           <div className="backg">

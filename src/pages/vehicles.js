@@ -2,36 +2,92 @@ import React, { useState } from 'react';
 import '../styles/vehicles.css';
 
 const Vehicles = () => {
-
     const [activeTab, setActiveTab] = useState(1);
+    const [editingItemId, setEditingItemId] = useState(null);
+    const [formData, setFormData] = useState({
+        id: '',
+        name: '',
+        description: '',
+        price: '',
+    });
 
-    const handleTabClick = (tabIndex) => {
-        setActiveTab(tabIndex);
+    const [tableData, setTableData] = useState({
+        1: [
+            { id: 1, name: 'Truck Owner 1', description: 'Description 1', price: '₹1000' },
+            { id: 2, name: 'Truck Owner 2', description: 'Description 2', price: '₹1500' },
+        ],
+        2: [
+            { id: 1, name: 'Customer 1', description: 'Description 1', price: '₹1000' },
+            { id: 2, name: 'Customer 2', description: 'Description 2', price: '₹1500' },
+        ],
+        3: [
+            { id: 1, name: 'Route 1', description: 'Description 1', price: '₹1000' },
+            { id: 2, name: 'Route 2', description: 'Description 2', price: '₹1500' },
+        ],
+        4: [
+            { id: 1, name: 'Truck Master 1', description: 'Description 1', price: '₹1000' },
+            { id: 2, name: 'Truck Master 2', description: 'Description 2', price: '₹1500' },
+        ],
+    });
+
+    const tableHeadings = {
+        1: ['ID', 'Truck Owner Name', 'Description', 'Price', 'Actions'],
+        2: ['ID', 'Customer Name', 'Description', 'Price', 'Actions'],
+        3: ['ID', 'Route Name', 'Description', 'Price', 'Actions'],
+        4: ['ID', 'Truck Master Name', 'Description', 'Price', 'Actions'],
     };
 
-    const [data, setData] = useState([
-        { id: 1, name: 'Item 1', description: 'Description 1', price: '₹1000' },
-        { id: 2, name: 'Item 2', description: 'Description 2', price: '₹1500' },
-        { id: 3, name: 'Item 3', description: 'Description 3', price: '₹2000' },
-        { id: 4, name: 'Item 4', description: 'Description 4', price: '₹2500' },
-    ]);
-
     const handleEdit = (id) => {
+        setEditingItemId(id);
+        const itemToEdit = tableData[activeTab].find(item => item.id === id);
+        setFormData(itemToEdit);
     };
 
     const handleDelete = (id) => {
-        setData(data.filter(item => item.id !== id));
+        const updatedData = tableData[activeTab].filter(item => item.id !== id);
+        setTableData(prevTableData => ({
+            ...prevTableData,
+            [activeTab]: updatedData,
+        }));
+        setEditingItemId(null);
     };
 
     const handleAdd = () => {
-        const newId = data.length + 1;
-        const newItem = {
-            id: newId,
-            name: `Item ${newId}`,
-            description: 'New Description',
-            price: '₹1000',
-        };
-        setData([...data, newItem]);
+        const newId = tableData[activeTab].length + 1;
+        const newItem = { ...formData, id: newId };
+        const updatedTableData = [...tableData[activeTab], newItem];
+        setTableData(prevTableData => ({
+            ...prevTableData,
+            [activeTab]: updatedTableData,
+        }));
+        setFormData({
+            id: '',
+            name: '',
+            description: '',
+            price: '',
+        });
+    };
+
+    const handleSave = () => {
+        if (editingItemId) {
+            const updatedData = tableData[activeTab].map(item =>
+                item.id === editingItemId ? formData : item
+            );
+            setTableData(prevTableData => ({
+                ...prevTableData,
+                [activeTab]: updatedData,
+            }));
+            setEditingItemId(null);
+        } else {
+            handleAdd();
+        }
+
+        setFormData({
+            id: '',
+            name: '',
+            description: '',
+            price: '',
+        });
     };
 
     return (
@@ -40,175 +96,99 @@ const Vehicles = () => {
             <div className='tab-container'>
                 <div className="tab-view">
                     <div className="tab-buttons">
-                        <button
-                            className={activeTab === 1 ? 'active' : ''}
-                            onClick={() => handleTabClick(1)}
-                        >
-                            Truck Owners
-                        </button>
-                        <button
-                            className={activeTab === 2 ? 'active' : ''}
-                            onClick={() => handleTabClick(2)}
-                        >
-                            Customers
-                        </button>
-                        <button
-                            className={activeTab === 3 ? 'active' : ''}
-                            onClick={() => handleTabClick(3)}
-                        >
-                            Routes
-                        </button>
-                        <button
-                            className={activeTab === 4 ? 'active' : ''}
-                            onClick={() => handleTabClick(4)}
-                        >
-                            Truck Master
-                        </button>
+                        {Object.keys(tableData).map(tabIndex => (
+                            <button
+                                key={tabIndex}
+                                className={activeTab === parseInt(tabIndex) ? 'active' : ''}
+                                onClick={() => {
+                                    setActiveTab(parseInt(tabIndex));
+                                    setEditingItemId(null);
+                                    setFormData({
+                                        id: '',
+                                        name: '',
+                                        description: '',
+                                        price: '',
+                                    });
+                                }}
+                            >
+                                {tableHeadings[parseInt(tabIndex)][1]}
+                            </button>
+                        ))}
                     </div>
                     <div className="tab-content">
-                        {activeTab === 1 && <p><div className="table-view">
+                        <div className="table-view">
                             <button className="add-btn" onClick={handleAdd}>
                                 Add Item
                             </button>
                             <table className="data-table">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Description</th>
-                                        <th>Price</th>
-                                        <th>Actions</th>
+                                        {tableHeadings[activeTab].map((heading, index) => (
+                                            <th key={index}>{heading}</th>
+                                        ))}
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {data.map(item => (
+                                    {tableData[activeTab].map(item => (
                                         <tr key={item.id}>
                                             <td>{item.id}</td>
-                                            <td>{item.name}</td>
-                                            <td>{item.description}</td>
-                                            <td>{item.price}</td>
                                             <td>
-                                                <button className="edit-btn" onClick={() => handleEdit(item.id)}>
-                                                    Edit
-                                                </button>
-                                                <button className="delete-btn" onClick={() => handleDelete(item.id)}>
-                                                    Delete
-                                                </button>
+                                                {editingItemId === item.id ? (
+                                                    <input
+                                                        type="text"
+                                                        value={formData.name}
+                                                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                                    />
+                                                ) : (
+                                                    item.name
+                                                )}
+                                            </td>
+                                            <td>
+                                                {editingItemId === item.id ? (
+                                                    <input
+                                                        type="text"
+                                                        value={formData.description}
+                                                        onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+                                                    />
+                                                ) : (
+                                                    item.description
+                                                )}
+                                            </td>
+                                            <td>
+                                                {editingItemId === item.id ? (
+                                                    <input
+                                                        type="text"
+                                                        value={formData.price}
+                                                        onChange={(e) => setFormData({ ...formData, price: e.target.value })}
+                                                    />
+                                                ) : (
+                                                    item.price
+                                                )}
+                                            </td>
+                                            <td>
+                                                {editingItemId === item.id ? (
+                                                    <button className="save-btn" onClick={handleSave}>
+                                                        Save
+                                                    </button>
+                                                ) : (
+                                                    <>
+                                                        <button className="edit-btn" onClick={() => handleEdit(item.id)}>
+                                                            Edit
+                                                        </button>
+                                                        <button className="delete-btn" onClick={() => handleDelete(item.id)}>
+                                                            Delete
+                                                        </button>
+                                                    </>
+                                                )}
                                             </td>
                                         </tr>
                                     ))}
                                 </tbody>
                             </table>
                         </div>
-                        </p>}
-                        {activeTab === 2 && <p><div className="table-view">
-                            <button className="add-btn" onClick={handleAdd}>
-                                Add Item
-                            </button>
-                            <table className="data-table">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Description</th>
-                                        <th>Price</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {data.map(item => (
-                                        <tr key={item.id}>
-                                            <td>{item.id}</td>
-                                            <td>{item.name}</td>
-                                            <td>{item.description}</td>
-                                            <td>{item.price}</td>
-                                            <td>
-                                                <button className="edit-btn" onClick={() => handleEdit(item.id)}>
-                                                    Edit
-                                                </button>
-                                                <button className="delete-btn" onClick={() => handleDelete(item.id)}>
-                                                    Delete
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div></p>}
-                        {activeTab === 3 && <div className="table-view">
-                            <button className="add-btn" onClick={handleAdd}>
-                                Add Item
-                            </button>
-                            <table className="data-table">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Description</th>
-                                        <th>Price</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {data.map(item => (
-                                        <tr key={item.id}>
-                                            <td>{item.id}</td>
-                                            <td>{item.name}</td>
-                                            <td>{item.description}</td>
-                                            <td>{item.price}</td>
-                                            <td>
-                                                <button className="edit-btn" onClick={() => handleEdit(item.id)}>
-                                                    Edit
-                                                </button>
-                                                <button className="delete-btn" onClick={() => handleDelete(item.id)}>
-                                                    Delete
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
-                        }
-                        {activeTab === 4 && <p><div className="table-view">
-                            <button className="add-btn" onClick={handleAdd}>
-                                Add Item
-                            </button>
-                            <table className="data-table">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Description</th>
-                                        <th>Price</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {data.map(item => (
-                                        <tr key={item.id}>
-                                            <td>{item.id}</td>
-                                            <td>{item.name}</td>
-                                            <td>{item.description}</td>
-                                            <td>{item.price}</td>
-                                            <td>
-                                                <button className="edit-btn" onClick={() => handleEdit(item.id)}>
-                                                    Edit
-                                                </button>
-                                                <button className="delete-btn" onClick={() => handleDelete(item.id)}>
-                                                    Delete
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
-                        </p>}
                     </div>
                 </div>
             </div>
-
         </>
     );
 };

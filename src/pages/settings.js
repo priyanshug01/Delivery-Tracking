@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/settings.css';
+import NavBar from '../components/navbar';
 
 const Settings = () => {
 
@@ -38,6 +39,7 @@ const Settings = () => {
 
     return (
         <>
+            <NavBar />
             <div className="heading">Settings</div>
             <form className="form-container" onSubmit={handleSubmit}>
                 <div className="input-row">

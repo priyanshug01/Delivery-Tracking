@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/details.css';
+import NavBar from '../components/navbar';
 
 const Details = () => {
 
@@ -27,6 +28,7 @@ const Details = () => {
 
     return (
         <>
+            <NavBar />
             <div className="heading">Details</div>
             <div className="order-details-container">
                 <div className="order-header">

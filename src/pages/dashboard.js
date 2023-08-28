@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/dashboard.css';
+import NavBar from '../components/navbar';
 import man from '../images/man.png';
 import truck from '../images/truck.png';
 import payload from '../images/payload.png';
@@ -15,6 +16,7 @@ import cross from '../images/cross.png';
 const Dashboard = () => {
     return (
         <>
+            <NavBar />
             <div className="heading">Dashboard</div>
             <div className="user">
                 <img src={man} alt="user" />

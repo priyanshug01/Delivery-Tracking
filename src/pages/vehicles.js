@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/vehicles.css';
+import NavBar from '../components/navbar';
 
 const Vehicles = () => {
     const [activeTab, setActiveTab] = useState(1);
@@ -92,6 +93,7 @@ const Vehicles = () => {
 
     return (
         <>
+            <NavBar />
             <span className="heading">Masters</span>
             <div className='tab-container'>
                 <div className="tab-view">

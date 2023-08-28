@@ -8,15 +8,13 @@ import Tracking from './pages/tracking';
 import Vehicles from './pages/vehicles';
 import Settings from './pages/settings';
 import Details from './pages/details';
-import NavBar from './components/navbar';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar />
         <Routes>
-        <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/location" element={<Location />} />
           <Route path="/tracking" element={<Tracking />} />

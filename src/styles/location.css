@@ -1,23 +1,119 @@
 .heading {
     font-size: 25px;
-    padding-left: 120px;
+    padding-left: 150px;
     padding-top: 20px;
     font-weight: 700;
+    position: absolute;
 }
 
-.user {
-    padding-left: 70%;
-    padding-top: 15px;
+.toggle-button {
+    position: absolute;
+    background: #c3b649;
+    border-radius: 10px;
+    color: #ffffff;
+    margin: 10px 0 0 1130px ;
+    cursor: pointer;
+    align-items: center;
 }
 
-.user img {
-    width: 30px;
+.toggle-button img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.entry-table-container {
+    margin: 80px 0 0 110px;
+    padding: 20px;
+    width: 87%;
+    border: 1px solid #111111;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    background: #c3b649;
+    overflow: hidden;
+}
+
+.entry-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.entry-table th {
+    padding: 8px;
+    text-align: center;
+    width: 25%;
+}
+
+.entry-table td {
+    padding: 8px;
+    text-align: center;
+    width: 25%;
+}
+
+.entry-table input,
+.entry-table input[type="date"] {
+    width: 80%;
+    padding: 5px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
     border-radius: 10px;
 }
 
-.username {
-    padding-left: 15px;
-    padding-top: 8px;
-    float: right;
-    font-weight: 500;
+.entry-table input::placeholder {
+    color: #111111;
+    font-size: 15px;
+    opacity: 0.6;
+}
+
+.entry-dropdown {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    color: #333;
+}
+
+.entry-dropdown:hover {
+    border-color: #999;
+}
+
+.entry-dropdown:focus {
+    border-color: #111111;
+    outline: none;
+}
+
+.custom-file-input {
+    background-color: #ffffff;
+    color: #111111;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+
+.custom-file-input:hover {
+    background-color: #f2eed1;
+}
+
+.selected-file {
+    margin-top: 10px;
+    color: #333;
+    display: none;
+}
+
+.entry-button {
+    background-color: #c3b649;
+    color: #ffffff;
+    position: absolute;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 50px 0 0 -100px;
 }

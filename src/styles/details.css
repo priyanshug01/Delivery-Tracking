@@ -92,7 +92,7 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: #c3b649;
+    background-color: #111111;
     position: relative;
 }
 
@@ -108,11 +108,16 @@
 }
 
 .circle-text {
-    margin: 35px -35px;
+    margin: 35px -65px;
     text-align: center;
     font-size: 12px;
-    width: 100px;
+    width: 150px;
 }
+
+.active-circle, 
+.completed-circle {
+    background-color: #c3b649;
+  }
 
 .cust-header {
     width: 35%;
@@ -234,7 +239,7 @@
     flex-direction: column;
     margin: 0 10px;
     width: 200px;
-    margin: 0 100px;
+    margin: 0 20px;
 }
 
 .details-dropdown-header {
@@ -246,7 +251,7 @@
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
     background-color: #ffffff;
 }
 
@@ -254,9 +259,28 @@
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
     background-color: #ffffff;
     cursor: pointer;
+}
+
+.dt-file-input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.dt-file-input:hover {
+    background: #ffffff;
+}
+
+.selected-file {
+    margin-top: 10px;
+    color: #333;
 }
 
 .dt-button {
@@ -267,7 +291,7 @@
     padding: 5px 15px;
     font-size: 16px;
     cursor: pointer;
-    margin: 40px 0;
+    margin: 50px 0 30px 50px;
 }
 
 .dt-button:hover {

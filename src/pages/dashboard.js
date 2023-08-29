@@ -12,11 +12,13 @@ import call from '../images/call.png';
 import pin from '../images/pin.png';
 import calendar from '../images/calendar.png';
 import cross from '../images/cross.png';
+import clogo from '../images/cmy-logo.png';
 
 const Dashboard = () => {
     return (
         <>
             <NavBar />
+            <img src={clogo} alt="Company Logo" className='company-logo'/>
             <div className="heading">Dashboard</div>
             <div className="user">
                 <img src={man} alt="user" />

@@ -4,27 +4,48 @@ import NavBar from '../components/navbar';
 
 const Details = () => {
 
-    const [selectedOption, setSelectedOption] = useState('Option 1');
+    const [selectedOption, setSelectedOption] = useState('Ordered');
+    const [submittedStatus, setSubmittedStatus] = useState('Ordered');
+    const [inputValue, setInputValue] = useState('');
+    const [selectedFile, setSelectedFile] = useState(null);
 
     const handleDropdownChange = (event) => {
         setSelectedOption(event.target.value);
+        setInputValue('');
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setSubmittedStatus(selectedOption);
     };
 
     const circleData = [
         { text: 'Ordered' },
+        { text: 'Order Confirmation' },
         { text: 'Picked Up' },
-        { text: 'Customs' },
-        { text: 'Picked Up' },
-        { text: 'Out for Delivery' },
-        { text: 'Delivered' },
+        { text: 'Journey Started' },
+        { text: 'Item Delivered' },
+        { text: 'Proof of Delivery' },
+        { text: 'Payment Received' },
     ];
 
-    const circles = circleData.map((circle, index) => (
-        <div key={index} className="circle-func">
-            <div className="hole"></div>
-            <div className="circle-text">{circle.text}</div>
-        </div>
-    ));
+    const circles = circleData.map((circle, index) => {
+        const isActive = circle.text === submittedStatus;
+        const isCompleted = circleData.findIndex((c) => c.text === submittedStatus) >= index;
+        const circleClasses = `circle-func ${isActive ? 'active-circle' : ''} ${isCompleted ? 'completed-circle' : ''}`;
+
+        return (
+            <div key={index} className={circleClasses}>
+                <div className="hole"></div>
+                <div className="circle-text">{circle.text}</div>
+            </div>
+        );
+    });
+
+    const handleFileChange = (event) => {
+        const file = event.target.files[0];
+        setSelectedFile(file);
+    };
 
     return (
         <>
@@ -188,20 +209,91 @@ const Details = () => {
                         <td>: 24-04-2023</td>
                     </tr>
                 </table>
-                <form className='details-form'>
-                    <div className="dt-input-row">
-                        <h4 className="details-dropdown-header">Enter Input</h4>
-                        <input className="dt-input" type="text" placeholder={`Enter Value`} />
-                    </div>
+                <form className='details-form' onSubmit={handleSubmit}>
                     <div className="details-dropdown">
                         <h4 className="details-dropdown-header">Change Status</h4>
                         <select className="dt-dropdown" value={selectedOption} onChange={handleDropdownChange}>
-                            <option value="Option 1">Shipped</option>
-                            <option value="Option 2">Delivered</option>
-                            <option value="Option 3">Cancelled</option>
-                            <option value="Option 2">Pending</option>
+                            <option value="Ordered">Ordered</option>
+                            <option value="Order Confirmation">Order Confirmation</option>
+                            <option value="Picked Up">Picked Up</option>
+                            <option value="Journey Started">Journey Started</option>
+                            <option value="Item Delivered">Item Delivered</option>
+                            <option value="Proof of Delivery">Proof of Delivery</option>
+                            <option value="Payment Received">Payment Received</option>
                         </select>
                     </div>
+
+                    {selectedOption === 'Order Confirmation' && (
+                        <div className="dt-input-row">
+                            <h4 className="details-dropdown-header">Enter Input</h4>
+                            <input
+                                type="text"
+                                value={inputValue}
+                                onChange={(e) => setInputValue(e.target.value)}
+                                placeholder="Input for Option 1"
+                                className='dt-input'
+                            />
+                        </div>
+                    )}
+                    {selectedOption === 'Picked Up' && (
+                        <div className="dt-input-row">
+                            <h4 className="details-dropdown-header">Enter Input</h4>
+                            <input
+                                type="text"
+                                value={inputValue}
+                                onChange={(e) => setInputValue(e.target.value)}
+                                placeholder="Input for Option 2"
+                                className='dt-input'
+                            />
+                        </div>
+                    )}
+                    {selectedOption === 'Journey Started' && (
+                        <div className="dt-input-row">
+                            <h4 className="details-dropdown-header">Enter Input</h4>
+                            <input
+                                type="text"
+                                value={inputValue}
+                                onChange={(e) => setInputValue(e.target.value)}
+                                placeholder="Input for Journey Started"
+                                className='dt-input'
+                            />
+                        </div>
+                    )}
+                    {selectedOption === 'Item Delivered' && (
+                        <div className="dt-input-row">
+                            <h4 className="details-dropdown-header">Enter Input</h4>
+                            <input
+                                type="text"
+                                value={inputValue}
+                                onChange={(e) => setInputValue(e.target.value)}
+                                placeholder="Input for Item Delivered"
+                                className='dt-input'
+                            />
+                        </div>
+                    )}
+
+                    {selectedOption === 'Proof of Delivery' && (
+                        <div className="dt-input-row">
+                            <h4 className="details-dropdown-header">Add Attachments</h4>
+                            <div className="dt-upload-container">
+                                <input
+                                    type="file"
+                                    accept="video/*"
+                                    onChange={handleFileChange}
+                                    id="dt-upload"
+                                    hidden
+                                />
+                                <label for="dt-upload" className='dt-file-input'>Upload Video</label>
+                                {selectedFile && (
+                                    <div className="dt-input">
+                                        File Selected: {selectedFile.name}
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    )}
+
+
                     <button className="dt-button" type="submit">Submit</button>
                 </form>
             </div>

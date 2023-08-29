@@ -10,6 +10,24 @@ const Location = () => {
     const colHeadings3 = ["Vehicle Type", "Vehicle Number", "Driver Name", "Driver Number"];
     const colHeadings4 = ["Origin", "Destination", "Fare Amount", "Add Attachments"];
 
+    const status = [
+        { value: "Shipped", label: "Shipped" },
+        { value: "Delivered", label: "Delivered" },
+        { value: "Cancelled", label: "Cancelled" },
+        { value: "Pending", label: "Pending" },
+    ];
+    const origin = [
+        { value: "Noida", label: "Noida" },
+        { value: "Mundka", label: "Mundka" },
+        { value: "Sonipat", label: "Sonipat" },
+        { value: "Alwar", label: "Alwar" },
+    ];
+    const destination = [
+        { value: "Guhawati", label: "Guhawati" },
+        { value: "Kolkata", label: "Kolkata" },
+        { value: "Tirupati", label: "Tirupati" },
+    ];
+
     const [selectedOptions, setSelectedOptions] = useState([]);
     const [selectedFile, setSelectedFile] = useState(null);
     const [isFormVisible, setIsFormVisible] = useState(true);
@@ -75,10 +93,9 @@ const Location = () => {
                                     <td key={colIndex}>
                                         {colIndex === 3 ? (
                                             <select className="entry-dropdown" value={selectedOptions} onChange={handleDropdownChange}>
-                                                <option value="Shipped">Shipped</option>
-                                                <option value="Delivered">Delivered</option>
-                                                <option value="Cancelled">Cancelled</option>
-                                                <option value="Pending">Pending</option>
+                                                {status.map(option => (
+                                                    <option key={option.value} value={option.value}>{option.label}</option>
+                                                ))}
                                             </select>
                                         ) : (
                                             <input type="text" placeholder={`Enter ${colHeadings2[colIndex]}`} />
@@ -118,17 +135,31 @@ const Location = () => {
                             <tr>
                                 {Array.from({ length: 4 }).map((_, colIndex) => (
                                     <td key={colIndex}>
-                                        {colIndex === 3 ? (
+                                        {colIndex === 0 ? (
+                                            <select className="entry-dropdown" value={selectedOptions} onChange={handleDropdownChange}>
+                                                {origin.map(option => (
+                                                    <option key={option.value} value={option.value}>{option.label}</option>
+                                                ))}
+                                            </select>
+                                        ) : colIndex === 1 ? (
+                                            <select className="entry-dropdown" value={selectedOptions} onChange={handleDropdownChange}>
+                                                {destination.map(option => (
+                                                    <option key={option.value} value={option.value}>{option.label}</option>
+                                                ))}
+                                            </select>
+                                        ) : colIndex === 3 ? (
                                             <div className="upload-container">
                                                 <input
-                                                    className='custom-file-input'
                                                     type="file"
-                                                    accept=".pdf,.doc,.docx,.jpg,.png"
+                                                    accept="image/*"
                                                     onChange={handleFileChange}
+                                                    id="upload"
+                                                    hidden
                                                 />
+                                                <label for="upload" className='custom-file-input'>Upload Image</label>
                                                 {selectedFile && (
                                                     <div className="selected-file">
-                                                        Selected File: {selectedFile.name}
+                                                        File Selected: {selectedFile.name}
                                                     </div>
                                                 )}
                                             </div>

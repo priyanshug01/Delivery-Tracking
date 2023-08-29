@@ -13,6 +13,11 @@ const Account = () => {
     setActiveForm('signin');
   };
 
+  const handleView = () => {
+    window.open(`./dashboard`, '_blank');
+
+};
+
   return (
     <>
       <div className="acc-heading">Accounts</div>
@@ -35,7 +40,7 @@ const Account = () => {
                 <h3>Sign In</h3>
                 <input type="text" placeholder="Username" required />
                 <input type="password" placeholder="Password" required />
-                <input type="submit" value="Login" />
+                <input type="submit" value="Login" onClick={() => handleView()} />
                 <a href="#" className="forget">Forgot Password?</a>
               </form>
             </div>

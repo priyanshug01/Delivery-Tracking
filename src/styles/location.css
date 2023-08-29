@@ -8,10 +8,10 @@
 
 .toggle-button {
     position: absolute;
-    background: #c3b649;
+    background: #ffffff;
     border-radius: 10px;
     color: #ffffff;
-    margin: 10px 0 0 1130px ;
+    margin: 10px 0 0 1130px;
     cursor: pointer;
     align-items: center;
 }
@@ -29,9 +29,10 @@
     border: 1px solid #111111;
     border-radius: 25px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: #fff;
-    background: #c3b649;
+    color: #111111;
+    background: #ffffff;
     overflow: hidden;
+    height: 550px;
 }
 
 .entry-table {
@@ -59,6 +60,7 @@
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 10px;
+    background: #ffffff;
 }
 
 .entry-table input::placeholder {
@@ -72,7 +74,7 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: white;
+    background-color: #ffffff;
     font-size: 16px;
     color: #333;
 }
@@ -87,33 +89,30 @@
 }
 
 .custom-file-input {
-    background-color: #ffffff;
-    color: #111111;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
+    display: inline-block;
+    padding: 7px;
+    border-radius: 10px;
     cursor: pointer;
-    outline: none;
+    border: 1px solid #ccc;
+    width: 75%;
 }
 
 .custom-file-input:hover {
-    background-color: #f2eed1;
+    background: #f2eed1;
 }
 
 .selected-file {
     margin-top: 10px;
     color: #333;
-    display: none;
 }
 
 .entry-button {
     background-color: #c3b649;
     color: #ffffff;
-    position: absolute;
     border: none;
     border-radius: 10px;
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
-    margin: 50px 0 0 -100px;
+    margin: 20px 0 0 0px;
 }

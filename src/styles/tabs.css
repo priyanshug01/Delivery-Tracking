@@ -1,0 +1,68 @@
+.masters-tab {
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.masters-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.masters-table th,
+.masters-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.masters-table th {
+    background-color: #f2eed1;
+    color: #111;
+    font-weight: 600;
+}
+
+.masters-table tr:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.edit-button,
+.add-item {
+    background-color: #c3b649;
+    color: #fff;
+    border: none;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.save-button,
+.cancel-button {
+    background-color: #c3b649;
+    color: #fff;
+    border: none;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 0 2px 2px 0;
+}
+
+input[type="text"] {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+tr.editing input[type="text"] {
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+tr.editing td {
+    padding: 5px;
+}

@@ -15,7 +15,7 @@ const NavBar = () => {
         <ul>
           <li><NavLink to="/dashboard" activeClassName="active-link"><img src={logo1} alt="DashBoard" /></NavLink></li>
           <li><NavLink to="/location" activeClassName="active-link"><img src={logo2} alt="Location" /></NavLink></li>
-          <li><NavLink to="/tracking" activeClassName="active-link"><img src={logo3} alt="Tracking" /></NavLink></li>
+          <li><NavLink to="/survelliance" activeClassName="active-link"><img src={logo3} alt="Survelliance" /></NavLink></li>
           <li><NavLink to="/vehicles" activeClassName="active-link"><img src={logo4} alt="Vehicles" /></NavLink></li>
           <li><NavLink to="/accounts" activeClassName="active-link"><img src={logo5} alt="Accounts" /></NavLink></li>
           <li><NavLink to="/settings" activeClassName="active-link"><img src={logo6} alt="Settings" /></NavLink></li>

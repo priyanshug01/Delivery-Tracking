@@ -128,9 +128,7 @@ const Settings = () => {
                                 <td>{item.route}</td>
                                 <td>{item.vehtype}</td>
                                 <td>{item.status}</td>
-                                <td><button className="view-btn" onClick={() => handleView(item.id)}>
-                                    View
-                                </button></td>
+                                <td><button className="view-btn" onClick={() => handleView(item.id)}>View</button></td>
                             </tr>
                         ))}
                     </tbody>

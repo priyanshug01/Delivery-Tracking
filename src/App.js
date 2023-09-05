@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Account from './pages/account';
 import Dashboard from './pages/dashboard';
 import EntryField from './pages/entryfield';
-import Tracking from './pages/tracking';
+import Survelliance from './pages/survelliance';
 import Masters from './pages/masters';
 import Settings from './pages/settings';
 import Details from './pages/details';
@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/location" element={<EntryField />} />
-          <Route path="/tracking" element={<Tracking />} />
+          <Route path="/survelliance" element={<Survelliance />} />
           <Route path="/vehicles" element={<Masters />} />
           <Route path="/accounts" element={<Account />} />
           <Route path="/settings" element={<Settings />} />

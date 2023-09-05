@@ -11,7 +11,7 @@
     background: #ffffff;
     border-radius: 10px;
     color: #ffffff;
-    margin: 10px 0 0 1130px;
+    margin: 10px 0 0 1190px;
     cursor: pointer;
     align-items: center;
 }
@@ -57,7 +57,8 @@
 .entry-table input[type="date"],
 .entry-table input[type="email"],
 .entry-table input[type="password"],
-.entry-table textarea {
+.entry-table textarea,
+.entry-table input[type="number"] {
     width: 80%;
     padding: 5px;
     height: 40px;
@@ -84,13 +85,16 @@
     color: #333;
 }
 
-.entry-dropdown:hover {
-    border-color: #999;
+.entry-dropdown:hover,
+.entry-table input:hover {
+    border-color: #c3b649;
 }
 
-.entry-dropdown:focus {
-    border-color: #111111;
+.entry-dropdown:focus,
+.entry-table input:focus {
     outline: none;
+    border: 2px solid #c3b649;
+    opacity: 0.5;
 }
 
 .custom-file-input {
@@ -98,13 +102,14 @@
     padding: 7px;
     border-radius: 10px;
     cursor: pointer;
-    border: 1px solid #ccc;
+    border: 1px solid #c3b649;
     width: 75%;
     text-align: center;
 }
 
 .custom-file-input:hover {
     background: #f2eed1;
+    opacity: 0.7;
 }
 
 .selected-file {
@@ -134,4 +139,16 @@
 
 .entry-table-container:-webkit-scrollbar-thumb:hover {
     background-color: #555;
+}
+
+.add-button,
+.del-button {
+    background-color: #c3b649;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px 0 0 0px;
 }

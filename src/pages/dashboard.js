@@ -73,7 +73,7 @@ const Dashboard = () => {
                     <div className='column1'>
                         <img src={truck} alt='truck' className='truck'></img>
                         <div className='vehicle-details'>
-                            <h4 className="vehicle-owner">Vehicle Owner</h4>
+                            <h4 className="vehicle-owner">Road Express</h4>
                         </div>
                         <div className="card-container">
                             <div className="card-row">

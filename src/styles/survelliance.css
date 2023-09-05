@@ -1,0 +1,111 @@
+.heading {
+    font-size: 25px;
+    font-weight: 700;
+    float: left;
+}
+
+.sur-container {
+    width: 1370px;
+    margin: 70px 0 20px 110px;
+    background: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 600px;
+    overflow: auto;
+    border: 1px solid #111111;
+}
+
+.sur-view {
+    border-radius: 25px;
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0 20px;
+}
+
+.sur-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.sur-buttons button {
+    padding: 10px 20px;
+    background-color: #f2eed1;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 50%;
+    font-weight: 600;
+    color: #111111;
+}
+
+.sur-buttons button.active {
+    background-color: #c3b649;
+    color: #fff;
+    border: 1px solid #111;
+}
+
+.table-view {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #111111;
+}
+
+.add-btn {
+    background-color: #c3b649;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.sur-data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sur-data-table th,
+.sur-data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    width: 10%;
+}
+
+.edit-btn,
+.delete-btn,
+.save-btn {
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #c3b649;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px;
+    margin-left: 10px;
+    width: 80px;
+}
+
+.edit-btn:hover,
+.delete-btn:hover,
+.add-btn:hover,
+.save-btn:hover {
+    background-color: #f2eed1;
+}
+
+.sur-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.sur-container::-webkit-scrollbar-thumb {
+    background-color: #c3b649;
+    border-radius: 25px;
+}
+
+.sur-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}

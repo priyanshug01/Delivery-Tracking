@@ -30,6 +30,7 @@ const DriverEntry = () => {
 
     const [selectedOptions, setSelectedOptions] = useState([]);
     const [selectedFile, setSelectedFile] = useState(null);
+    const [showSubs, setShowSubs] = useState(false);
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
@@ -39,6 +40,10 @@ const DriverEntry = () => {
     const handleDropdownChange = (event) => {
         const selectedValue = event.target.value;
         setSelectedOptions(selectedValue);
+    };
+
+    const toggleSubsVisibility = () => {
+        setShowSubs(prevVisible => !prevVisible);
     };
 
     return (
@@ -126,7 +131,8 @@ const DriverEntry = () => {
                                         <option key={option.value} value={option.value}>{option.label}</option>
                                     ))}
                                 </select>
-                            </td>                        </tr>
+                            </td>
+                        </tr>
                         <tr>
                             <th>Select Rate Type</th>
                             <td>
@@ -145,8 +151,39 @@ const DriverEntry = () => {
                                 </select>
                             </td>
                         </tr>
+                        <br />
+                        <tr>
+                            <th>Subscription</th>
+                            <td><button className="add-button" type="button" onClick={toggleSubsVisibility}>+</button></td>
+                        </tr>
                     </tbody>
                 </table>
+                {showSubs && (
+                    <div>
+                        <table className="entry-table">
+                            <tbody>
+                                <tr>
+                                    <th>Vehicle Number</th>
+                                    <td><input type="text" placeholder={`Enter Vehicle Number`} /></td>
+                                </tr>
+                                <tr>
+                                    <th>Select Date</th>
+                                    <td><input type="date" /></td>
+                                </tr>
+                                <tr>
+                                    <th>Kilometers Allowed</th>
+                                    <td><input type="text" placeholder={`Enter Kilometers Allowed`} /></td>
+                                    <th>Rate After Allowed KM</th>
+                                    <td><input type="text" placeholder={`Enter Rate`} /></td>
+                                </tr>
+                                <tr>
+                                    <th>Amount</th>
+                                    <td><input type="text" placeholder={`Enter Amount`} /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                )}
                 <button className="entry-button" type="button">Add Details</button>
             </div>
         </>

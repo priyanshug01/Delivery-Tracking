@@ -4,20 +4,6 @@ import '../styles/tabs.css';
 const Transport = ({ data: initialData }) => {
     const [editMode, setEditMode] = useState(false);
     const [editedData, setEditedData] = useState(null);
-    const [newItem, setNewItem] = useState({
-        id: '',
-        name: '',
-        state: '',
-        city: '',
-        accno: '',
-        accholder: '',
-        ifsc: '',
-        mobno: '',
-        fleetsize: '',
-        addedfrom: '',
-        aadharpic: '',
-    });
-
     const [data, setData] = useState(initialData);
 
     const handleEdit = (item) => {
@@ -39,27 +25,13 @@ const Transport = ({ data: initialData }) => {
         setEditedData(null);
     };
 
-    const handleAddItem = () => {
-        const updatedData = [...data, newItem];
-        setNewItem({
-            id: '',
-            name: '',
-            state: '',
-            city: '',
-            accno: '',
-            accholder: '',
-            ifsc: '',
-            mobno: '',
-            fleetsize: '',
-            addedfrom: '',
-            aadharpic: '',
-        });
-        setData(updatedData);
+    const handleAdd = () => {
+        window.open(`./transportentry`, '_blank');
     };
 
     return (
         <div className="masters-tab">
-            <button className="add-item" onClick={handleAddItem}>Add Item</button>
+            <button className="add-item" onClick={() => handleAdd()}>Add Item</button>
             <table className="masters-table">
                 <thead>
                     <tr>

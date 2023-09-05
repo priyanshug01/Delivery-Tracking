@@ -23,7 +23,7 @@
 }
 
 .entry-table-container {
-    margin: 80px 0 0 110px;
+    margin: 70px 0 0 110px;
     padding: 20px;
     width: 87%;
     border: 1px solid #111111;
@@ -32,12 +32,13 @@
     color: #111111;
     background: #ffffff;
     overflow: auto;
-    height: 550px;
+    height: 560px;
 }
 
 .entry-table {
     border-collapse: collapse;
     width: 100%;
+    font-size: 15px;
 }
 
 .entry-table th {
@@ -52,8 +53,11 @@
     width: 30%;
 }
 
-.entry-table input,
-.entry-table input[type="date"] {
+.entry-table input[type="text"],
+.entry-table input[type="date"],
+.entry-table input[type="email"],
+.entry-table input[type="password"],
+.entry-table textarea {
     width: 80%;
     padding: 5px;
     height: 40px;
@@ -63,9 +67,10 @@
     background: #ffffff;
 }
 
-.entry-table input::placeholder {
+.entry-table input::placeholder,
+.entry-table textarea::placeholder {
     color: #111111;
-    font-size: 15px;
+    font-size: 13px;
     opacity: 0.6;
 }
 

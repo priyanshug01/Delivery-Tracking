@@ -3,13 +3,6 @@ import React, { useState } from 'react';
 const City = ({ data: initialData }) => {
     const [editMode, setEditMode] = useState(false);
     const [editedData, setEditedData] = useState(null);
-    const [newItem, setNewItem] = useState({
-        id: '',
-        state: '',
-        city: '',
-        addedfrom: '',
-    });
-
     const [data, setData] = useState(initialData);
 
     const handleEdit = (item) => {
@@ -31,21 +24,13 @@ const City = ({ data: initialData }) => {
         setEditedData(null);
     };
 
-    const handleAddItem = () => {
-        const newItemWithId = { ...newItem, id: data.length + 1 };
-        const updatedData = [...data, newItemWithId];
-        setNewItem({
-            id: '',
-            state: '',
-            city: '',
-            addedfrom: '',
-        });
-        setData(updatedData);
+    const handleAdd = () => {
+        window.open(`./cityentry`, '_blank');
     };
 
     return (
         <div className="masters-tab">
-            <button className="add-item" onClick={handleAddItem}>Add Item</button>
+            <button className="add-item" onClick={() => handleAdd()}>Add Item</button>
             <table className="masters-table">
                 <thead>
                     <tr>

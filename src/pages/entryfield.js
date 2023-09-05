@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/location.css';
+import '../styles/entryfield.css';
 import NavBar from '../components/navbar';
 import upArrow from '../images/upArrow.png';
 import downArrow from '../images/downArrow.png';

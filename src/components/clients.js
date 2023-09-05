@@ -3,22 +3,6 @@ import React, { useState } from 'react';
 const Client = ({ data: initialData }) => {
     const [editMode, setEditMode] = useState(false);
     const [editedData, setEditedData] = useState(null);
-    const [newItem, setNewItem] = useState({
-        id: '',
-        name: '',
-        state: '',
-        city: '',
-        mobno: '',
-        email: '',
-        design: '',
-        empid: '',
-        surcharge: '',
-        gstno: '',
-        ratemat: '',
-        waitcharge: '',
-        profpic: '',
-    });
-
     const [data, setData] = useState(initialData);
 
     const handleEdit = (item) => {
@@ -40,30 +24,13 @@ const Client = ({ data: initialData }) => {
         setEditedData(null);
     };
 
-    const handleAddItem = () => {
-        const newItemWithId = { ...newItem, id: data.length + 1 };
-        const updatedData = [...data, newItemWithId];
-        setNewItem({
-            id: '',
-            name: '',
-            state: '',
-            city: '',
-            mobno: '',
-            email: '',
-            design: '',
-            empid: '',
-            surcharge: '',
-            gstno: '',
-            ratemat: '',
-            waitcharge: '',
-            profpic: '',
-        });
-        setData(updatedData);
+    const handleAdd = () => {
+        window.open(`./cliententry`, '_blank');
     };
 
     return (
         <div className="masters-tab">
-            <button className="add-item" onClick={handleAddItem}>Add Item</button>
+            <button className="add-item" onClick={() => handleAdd()}>Add Item</button>
             <table className="masters-table">
                 <thead>
                     <tr>

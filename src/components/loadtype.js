@@ -4,11 +4,6 @@ import '../styles/tabs.css';
 const LoadType = ({ data: initialData }) => {
     const [editMode, setEditMode] = useState(false);
     const [editedData, setEditedData] = useState(null);
-    const [newItem, setNewItem] = useState({
-        id: '',
-        loadtype: '',
-    });
-
     const [data, setData] = useState(initialData);
 
     const handleEdit = (item) => {
@@ -30,19 +25,13 @@ const LoadType = ({ data: initialData }) => {
         setEditedData(null);
     };
 
-    const handleAddItem = () => {
-        const newItemWithId = { ...newItem, id: data.length + 1 };
-        const updatedData = [...data, newItemWithId];
-        setNewItem({
-            id: '',
-            loadtype: '',
-        });
-        setData(updatedData);
+    const handleAdd = () => {
+        window.open(`./loadtypeentry`, '_blank');
     };
 
     return (
         <div className="masters-tab">
-            <button className="add-item" onClick={handleAddItem}>Add Item</button>
+            <button className="add-item" onClick={() => handleAdd()}>Add Item</button>
             <table className="masters-table">
                 <thead>
                     <tr>
